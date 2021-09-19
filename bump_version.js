@@ -15,4 +15,6 @@ if (newVersion !== oldVersion) {
   console.log('🎉  ' + colors.green('Bumping package version to ') + colors.green.bold(`v${newVersion}`));
   const output = Object.assign(packageJSON, { version: newVersion });
   fs.writeFileSync('./package.json', JSON.stringify(output, null, 2) + '\n');
+} else {
+  console.log(colors.green('Package version remains at ') + colors.green.bold(`v${oldVersion}`));
 }
