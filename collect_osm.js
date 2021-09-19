@@ -9,7 +9,6 @@
 //
 // Please see README.md for more info
 
-// External
 const colors = require('colors/safe.js');
 const fs = require('fs');
 const osmium = require('osmium');
@@ -22,7 +21,7 @@ const withLocale = localeCompare('en-US');
 
 if (process.argv.length < 3) {
   console.log('');
-  console.log('Usage:  node scripts/collect_all.js <planet.osm>');
+  console.log('Usage:  node scripts/collect_osm.js <planet.osm>');
   console.log('');
   process.exit(1);
 }
@@ -39,7 +38,7 @@ collect('network', NETWORKKEYS, 10);
 
 function collect(tag, fromKeys, threshold) {
   const what = `${tag}s`;   // names, brands, operators, networks
-  const file = `dist/collected/${what}_all.json`;
+  const file = `dist/osm/${what}_all.json`;
 
   const START = '🏗   ' + colors.yellow(`Collecting ${what} from OSM planet...`);
   const END = '👍  ' + colors.green(`${what} collected`);

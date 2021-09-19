@@ -19,7 +19,7 @@ This takes a long time and a lot of disk space. It can be done occasionally by p
 This should be done in the **nsi-collector** project. Results will go in `dist/*.json`.
 This is complicated because node-osmium is available prebuilt only for older environments. It seems to work ok on Node 10.
 
-- `node scripts/collect_all.js /path/to/filtered.osm.pbf`
+- `node scripts/collect_osm.js /path/to/filtered.osm.pbf`
 
 #### Check in the collected names
 
