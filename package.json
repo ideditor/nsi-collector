@@ -1,6 +1,6 @@
 {
   "name": "@ideditor/nsi-collector",
-  "version": "1.0.0",
+  "version": "1.0.20210919",
   "license": "ISC",
   "repository": "github:ideditor/nsi-collector",
   "description": "Scripts to collect names for the name-suggestion-index project.",
@@ -16,6 +16,10 @@
     "shelljs": "0.8.0"
   },
   "scripts": {
+    "version": "node bump_version.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": "10"
