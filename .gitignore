@@ -1,0 +1,15 @@
+/coverage
+/node_modules
+
+.idea
+.DS_Store
+.cache
+npm-debug.log
+package-lock.json
+secrets.json
+
+*.backup
+*.bz2
+*.osm
+*.pbf
+*.swp
