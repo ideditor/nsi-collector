@@ -5,21 +5,33 @@ Scripts to collect names for the [name-suggestion-index](https://github.com/osml
 
 ## Collecting names from the OSM planet
 
-This takes a long time and a lot of disk space. It can be done occasionally by project maintainers.
+This takes a long time (~1-2h) and a lot of disk space (~65GB). It can be done occasionally by project maintainers.
 
-#### Get a planet file and prefilter it
-- Install `osmium` command-line tool (may only be available on some environments)
-  - `apt-get install osmium-tool` or `brew install osmium-tool` or similar
+### Get the planet file
 - [Download the planet](http://planet.osm.org/pbf/)
+  - [Mirrors](https://ftpmirror.your.org/pub/openstreetmap/pbf/) are likely faster than the main repo
   - `curl -L -o planet-latest.osm.pbf https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf`
-- Prefilter the planet file to only include named items with keys we are looking for:
-  - `osmium tags-filter planet-latest.osm.pbf -R name,brand,operator,network --overwrite -o filtered.osm.pbf`
 
-#### Run the collection script
-This should be done in the **nsi-collector** project. Results will go in `dist/*.json`.
-This is complicated because node-osmium is available prebuilt only for older environments. It seems to work ok on Node 10.
+### Prefilter it and collect it
+- Use docker and `run.py`
+  - Make sure your dockermachine has at least 2GB of RAM
+  - Place the pbf of the planet osm file you wish to process in the same directory as `input-planet.pbf`
+  - Remove the node_modules directory if it exists from a former run (the script will remind you)
+  - run `./run.py`
+  - This will also run md5 of the input planet file and write it to last_run.md5 on success.
+  - That way you can see if it's even worth a bunch of resources to run this script
+  - Md5 hashes of pbf files are available: https://planet.openstreetmap.org/pbf/
 
-- `node collect_osm.js /path/to/filtered.osm.pbf`
+
+- Manually
+  - Install `osmium` command-line tool (may only be available on some environments)
+    - `apt-get install osmium-tool` or `brew install osmium-tool` or similar
+  - Prefilter the planet file to only include named items with keys we are looking for:
+    - `osmium tags-filter planet-latest.osm.pbf -R name,brand,operator,network --overwrite -o filtered.osm.pbf`
+  - Run the collection script
+    - This should be done in the **nsi-collector** project. Results will go in `dist/*.json`.
+    - This is complicated because node-osmium is available prebuilt only for older environments. It seems to work ok on Node 10.
+  - `node collect_osm.js /path/to/filtered.osm.pbf`
 
 #### Check in the collected names
 
