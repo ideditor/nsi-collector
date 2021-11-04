@@ -14,7 +14,7 @@ This takes a long time (~1-2h) and a lot of disk space (~65GB). It can be done o
 
 #### Use docker and `run.py`
 - Make sure your dockermachine has at least 2GB of RAM
-- Place the pbf of the planet osm file you wish to process in the same directory as `input-planet.pbf`
+- Place the pbf of the planet osm file you wish to process in the same directory as `input-planet.osm.pbf`
 - Remove the node_modules directory if it exists from a former run (the script will remind you)
 - Run `./run.py`
 - This will also run md5 of the input planet file and write it to last_run.md5 on success.
