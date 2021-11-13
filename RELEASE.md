@@ -1,6 +1,7 @@
-## Release Checklist
+# Release Checklist
 
 ### Update version, tag, and publish
+
 - [ ] git checkout main
 - [ ] git pull origin
 - [ ] npm run version  _(version number updates automatically and will print to console)_
