@@ -1,6 +1,6 @@
 # Release Checklist
 
-### Update version, tag, and publish
+## Update version, tag, and publish
 
 - [ ] git checkout main
 - [ ] git pull origin
