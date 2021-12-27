@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/%40ideditor%2Fnsi-collector.svg)](https://badge.fury.io/js/%40ideditor%2Fnsi-collector)
+
 # nsi-collector
 
 Scripts to collect names for the [name-suggestion-index](https://github.com/osmlab/name-suggestion-index) project.
