@@ -26,8 +26,8 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-const POIKEYS = ['amenity', 'shop', 'leisure', 'tourism', 'office', 'craft', 'healthcare'];
-const OPERATORKEYS = ['amenity', 'healthcare', 'emergency', 'leisure', 'office', 'power', 'route']; //, 'public_transport'];
+const POIKEYS = ['amenity', 'club', 'craft', 'healthcare', 'leisure', 'office', 'shop', 'tourism'];
+const OPERATORKEYS = ['amenity', 'boundary', 'emergency', 'healthcare', 'leisure', 'man_made', 'office', 'power', 'route', 'telecom']; //, 'public_transport'];
 const NETWORKKEYS = ['amenity', 'power', 'route']; //, 'public_transport'];
 
 collect('name', POIKEYS, 50);
