@@ -9,7 +9,7 @@
 //
 // Please see README.md for more info
 
-const colors = require('colors/safe.js');
+const chalk = require('chalk');
 const fs = require('fs');
 const osmium = require('osmium');
 const shell = require('shelljs');
@@ -40,8 +40,8 @@ function collect(tag, fromKeys, threshold) {
   const what = `${tag}s`;   // names, brands, operators, networks
   const file = `dist/osm/${what}_all.json`;
 
-  const START = '🏗   ' + colors.yellow(`Collecting ${what} from OSM planet...`);
-  const END = '👍  ' + colors.green(`${what} collected`);
+  const START = '🏗   ' + chalk.yellow(`Collecting ${what} from OSM planet...`);
+  const END = '👍  ' + chalk.green(`${what} collected`);
   console.log('');
   console.log(START);
   console.time(END);

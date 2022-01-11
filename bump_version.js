@@ -1,4 +1,4 @@
-const colors = require('colors/safe.js');
+const chalk = require('chalk');
 const fs = require('fs');
 const packageJSON = require('./package.json');
 
@@ -12,9 +12,9 @@ const oldVersion = packageJSON.version;
 const newVersion = oldVersion.replace(/(\d){8}/, `${yyyy}${mm}${dd}`);
 
 if (newVersion !== oldVersion) {
-  console.log('🎉  ' + colors.green('Bumping package version to ') + colors.green.bold(`v${newVersion}`));
+  console.log('🎉  ' + chalk.green('Bumping package version to ') + chalk.green.bold(`v${newVersion}`));
   const output = Object.assign(packageJSON, { version: newVersion });
   fs.writeFileSync('./package.json', JSON.stringify(output, null, 2) + '\n');
 } else {
-  console.log(colors.green('Package version remains at ') + colors.green.bold(`v${oldVersion}`));
+  console.log(chalk.green('Package version remains at ') + chalk.green.bold(`v${oldVersion}`));
 }
