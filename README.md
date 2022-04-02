@@ -6,7 +6,7 @@ Scripts to collect names for the [name-suggestion-index](https://github.com/osml
 
 ## Collecting names from the OSM planet
 
-This takes a long time (~1-2h) and a lot of disk space (~68GB). It can be done occasionally by project maintainers.
+This takes a long time (~1-2h) and a lot of disk space (~75GB). It can be done occasionally by project maintainers.
 
 ### Get the planet file
 
