@@ -13,7 +13,7 @@
     "chalk": "4.1.2",
     "locale-compare": "1.0.0",
     "osmium": "0.5.7",
-    "shelljs": "0.8.0"
+    "shelljs": "^0.8.5"
   },
   "scripts": {
     "version": "node bump_version.js"
