@@ -6,7 +6,7 @@
   "description": "Scripts to collect names for the name-suggestion-index project.",
   "contributors": [
     "Bryan Housel <bhousel@gmail.com> (https://github.com/bhousel)",
-    "Tim Smith <tsmith@chef.io> (https://github.com/tas50)"
+    "Tim Smith <tim@mondoo.com> (https://github.com/tas50)"
   ],
   "devDependencies": {
     "@aitodotai/json-stringify-pretty-compact": "1.3.0",
