@@ -1,6 +1,6 @@
-ISC License
+## ISC License
 
-Copyright (c) 2021-present, nsi-collector contributors
+Copyright (c) 2025, nsi-collector contributors
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
 with or without fee is hereby granted, provided that the above copyright notice
