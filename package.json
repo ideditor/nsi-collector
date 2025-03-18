@@ -1,6 +1,6 @@
 {
   "name": "@ideditor/nsi-collector",
-  "version": "1.0.20240823",
+  "version": "1.0.20250318",
   "license": "ISC",
   "repository": "github:ideditor/nsi-collector",
   "description": "Scripts to collect names for the name-suggestion-index project.",
