@@ -2,7 +2,10 @@
   "name": "@ideditor/nsi-collector",
   "version": "1.0.20250615",
   "license": "ISC",
-  "repository": "github:ideditor/nsi-collector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ideditor/nsi-collector.git"
+  },
   "description": "Scripts to collect names for the name-suggestion-index project.",
   "contributors": [
     "Bryan Housel <bhousel@gmail.com> (https://github.com/bhousel)",
