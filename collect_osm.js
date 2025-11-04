@@ -13,7 +13,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const osmium = require('osmium');
 const shell = require('shelljs');
-const stringify = require('@aitodotai/json-stringify-pretty-compact');
+const stringify = require('json-stringify-pretty-compact');
 
 const localeCompare = require('locale-compare');
 const withLocale = localeCompare('en-US');
